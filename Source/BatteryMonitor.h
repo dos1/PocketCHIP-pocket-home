@@ -13,9 +13,6 @@ class BatteryMonitor: public juce::Thread {
 private:
   BatteryStatus status;
   
-  Array<int> percentages;
-  int addAndCalculateAverage(int);
-  
 public:
   BatteryMonitor();
   ~BatteryMonitor();

@@ -277,7 +277,7 @@ clock(nullptr), labelip("ip", "")
   batteryMonitor.startThread();
   
   batteryIconTimer.launcherComponent = this;
-  batteryIconTimer.startTimer(1000);
+  batteryIconTimer.startTimer(2000);
   batteryIconTimer.timerCallback();
   
   wifiIconTimer.launcherComponent = this;
@@ -288,7 +288,7 @@ clock(nullptr), labelip("ip", "")
 
 LauncherComponent::~LauncherComponent() {
   batteryIconTimer.stopTimer();
-  batteryMonitor.stopThread(2000);
+  batteryMonitor.stopThread(5000);
 }
 
 void LauncherComponent::paint(Graphics &g) {
